@@ -27,4 +27,32 @@ Como ventajas, estos modelos son fáciles de entrenar, ofrecen buen desempeño c
 
 La elección de estos modelos es pertinente para un problema de predicción continua como este, y todos ellos fueron revisados durante el curso, cumpliendo con los lineamientos del proyecto.
 
+Dataset y fuente
+Se utilizó el Body Fat Prediction Dataset, el cual contiene 252 registros con 15 variables, incluyendo medidas como densidad corporal, edad, peso, altura y distintas circunferencias. El dataset fue obtenido desde la plataforma Kaggle, publicado por el usuario "fedesoriano" bajo licencia abierta.
+
+Metodología aplicada (paso a paso)
+
+Primero se cargó el dataset desde Kaggle, que contiene mediciones físicas de personas junto con su porcentaje de grasa corporal. Se revisó la estructura del archivo utilizando los métodos head, info y describe, lo que permitió tener una visión general de los datos y detectar posibles problemas.
+
+Luego, se realizó un análisis exploratorio utilizando una matriz de correlación. Esta herramienta ayudó a identificar qué variables tenían mayor relación con la variable objetivo, que en este caso es BodyFat. Se observó que abdomen, chest y hip tenían alta correlación positiva, lo que sirvió como orientación para el proceso de selección de variables.
+
+A continuación, se prepararon los datos para el modelo. Se eliminaron variables irrelevantes y se normalizaron las variables numéricas mediante la técnica de escalamiento estándar usando StandardScaler. Posteriormente, los datos se dividieron en conjuntos de entrenamiento y prueba con la función train_test_split.
+
+Para predecir el porcentaje de grasa corporal, se entrenaron tres modelos de regresión: regresión lineal, árbol de decisión y bosque aleatorio. Cada uno fue evaluado utilizando métricas como error absoluto medio (MAE), error cuadrático medio (MSE) y coeficiente de determinación (R2).
+
+Finalmente, se compararon los resultados obtenidos por cada modelo. Random Forest fue el que mostró el mejor desempeño general, con un R2 de 0.6512, y los menores errores MAE y MSE. Estos resultados se visualizaron mediante gráficos de barras comparativos y una gráfica que muestra los valores reales versus los valores predichos, lo que permitió validar visualmente la calidad de las predicciones.
+
+Resultados obtenidos
+Tras evaluar los tres modelos entrenados, se observaron los siguientes resultados:
+Regresión Lineal: obtuvo un MAE de 3.35, MSE de 19.41 y un R2 de 0.5827.
+Árbol de Decisión: presentó un desempeño inferior, con un MAE de 5.12, MSE de 37.51 y R2 de 0.1936.
+Random Forest: fue el modelo que obtuvo el mejor rendimiento general, alcanzando un MAE de 3.32, MSE de 16.23 y un R2 de 0.6512.
+Estos resultados se visualizaron en un gráfico comparativo que muestra claramente la superioridad del modelo Random Forest en términos de precisión. Además, se generó una gráfica de dispersión que compara los valores reales con los valores predichos, evidenciando una alineación aceptable en la mayoría de los casos.
+
+Conclusiones
+
+Se concluye que el modelo de Random Forest es el más adecuado para predecir el porcentaje de grasa corporal en este conjunto de datos, ya que logró los mejores resultados en todas las métricas evaluadas. Además, se comprobó que variables como abdomen y pecho son fuertes predictores del BodyFat, lo que refuerza la importancia del análisis exploratorio inicial.
+
+El proceso seguido permitió aplicar paso a paso técnicas reales de machine learning, desde la exploración de datos hasta la comparación de modelos. A pesar de tratarse de un dataset pequeño, se logró una predicción razonablemente precisa, lo que demuestra que una buena preparación de los datos y una selección adecuada de modelos pueden generar buenos resultados incluso en proyectos sencillos.
+
 
