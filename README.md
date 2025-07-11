@@ -40,7 +40,7 @@ A continuación, se prepararon los datos para el modelo. Se eliminaron variables
 
 Para predecir el porcentaje de grasa corporal, se entrenaron tres modelos de regresión: regresión lineal, árbol de decisión y bosque aleatorio. Cada uno fue evaluado utilizando métricas como error absoluto medio (MAE), error cuadrático medio (MSE) y coeficiente de determinación (R2).
 
-Finalmente, se compararon los resultados obtenidos por cada modelo. Random Forest fue el que mostró el mejor desempeño general, con un R2 de 0.6512, y los menores errores MAE y MSE. Estos resultados se visualizaron mediante gráficos de barras comparativos y una gráfica que muestra los valores reales versus los valores predichos, lo que permitió validar visualmente la calidad de las predicciones.
+Comparamos los resultados de los tres modelos para ver cuál funcionaba mejor con este conjunto de datos. Random Forest fue el que mostró el mejor desempeño general, con un R2 de 0.6512, y los menores errores MAE y MSE. Estos resultados se visualizaron mediante gráficos de barras comparativos y una gráfica que muestra los valores reales versus los valores predichos, lo que permitió validar visualmente la calidad de las predicciones.
 
 Resultados obtenidos
 Tras evaluar los tres modelos entrenados, se observaron los siguientes resultados:
